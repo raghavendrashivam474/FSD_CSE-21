@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const numbers = [11, 25, 37, 49, 50, 62, 73, 84, 95, 100];
+        const squareroot = numbers.filter(num => num % 2 === 0).map(num => Math.sqrt(num));
+        const cube = numbers.filter(num => num % 2 !== 0).map(num => Math.pow(num, 3));
+        document.write("<br>Square Roots: " + squareroot);
+        document.write("<br>Cubes: " + cube);
+    </script>
+</body>
+</html>
