@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //using reduce method we'd first filter the even , then find square root of evens then add them all together
+        const numbers = [11, 25, 37, 49, 50, 62, 73, 84, 95, 100];
+        const sumOfSquareRoots = numbers.filter(num => num % 2 === 0).reduce((acc, num) => acc + Math.sqrt(num), 0);
+        document.write("<br>Sum of Square Roots of Even Numbers: " + sumOfSquareRoots);
+    </script>
+</body>
+</html>
