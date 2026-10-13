@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import UserProfile from './components/UserProfile.jsx'; // Make sure the path matches your file structure
 
 function App() {
-  const [activeId, setActiveId] = useState(1);
+  const [activeId, setActiveId] = useState(0);
 
   return (
     <div style={{ padding: '20px' }}>

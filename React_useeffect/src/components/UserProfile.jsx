@@ -11,17 +11,14 @@ function UserProfile({ userId }) {
     setLoading(true);
     setErrorMsg(null);
 
-    // 2. Use axios.get instead of fetch
     axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`, {
-      signal: abortController.signal // Passes the abort signal to Axios
+      signal: abortController.signal 
     })
     .then((response) => {
-      // 3. Axios automatically parses JSON, so the data is directly in response.data
       setUser(response.data);
       setLoading(false);
     })
     .catch((error) => {
-      // 4. Check if the error was just a manual abort
       if (axios.isCancel(error) || error.name === 'CanceledError') {
         return; 
       }
@@ -30,7 +27,6 @@ function UserProfile({ userId }) {
       setLoading(false);
     });
 
-    // 5. Cleanup function remains the same
     return () => {
       abortController.abort();
     };
@@ -41,7 +37,7 @@ function UserProfile({ userId }) {
   if (!user) return <p>No user found.</p>;
 
   return (
-    <div style={{ border: '1px solid #ccc', padding: '15px', marginTop: '10px', borderRadius: '8px' }}>
+    <div>
       <h2>User Profile (via Axios)</h2>
       <p><strong>Name:</strong> {user.name}</p>
       <p><strong>Email:</strong> {user.email}</p>
