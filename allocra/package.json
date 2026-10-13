@@ -1,0 +1,23 @@
+{
+  "name": "allocra",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Allocra - Academic Scheduling & Allocation Engine",
+  "scripts": {
+    "test": "npm run test --prefix server && npm run test --prefix client",
+    "test:server": "npm run test --prefix server",
+    "test:client": "npm run test --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "start:server": "npm run start --prefix server",
+    "build:client": "npm run build --prefix client"
+  },
+  "keywords": [
+    "timetable",
+    "scheduling",
+    "academic",
+    "allocation"
+  ],
+  "author": "",
+  "license": "ISC"
+}
